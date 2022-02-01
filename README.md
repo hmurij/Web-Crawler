@@ -15,8 +15,8 @@ Link to [Postman test data samples](https://www.postman.com/avionics-physicist-2
 
 ## Installation
 
-Download MeetingsManager folder or ```git pull https://github.com/hmurij/meetingAPI.git``` 
-Import existing Maven project and run com.visma.internship.MeetingsManagerApplication.java or run jar file with ```java -jar meetingAPI.jar```, please note "data" folder should be in the same directory as jar file.
+Download MeetingsManager folder or ```git pull https://github.com/hmurij/Web-Crawler.git``` 
+Import existing Maven project and run com.webcrawler.WebCrawlerApplication.java or start application by executing startCrawler.bat, please note webCrawler.jar should be in the same directory as bat file.
 
 
 
