@@ -1,1 +1,0 @@
-java -jar webCrawler.jar
