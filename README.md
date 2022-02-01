@@ -15,7 +15,7 @@ Link to [Postman test data samples](https://www.postman.com/avionics-physicist-2
 
 ## Installation
 
-Download MeetingsManager folder or ```git pull https://github.com/hmurij/Web-Crawler.git``` 
+Download code as ZIP or ```git pull https://github.com/hmurij/Web-Crawler.git``` 
 Import existing Maven project and run com.webcrawler.WebCrawlerApplication.java or start application by executing startCrawler.bat, please note webCrawler.jar should be in the same directory as bat file.
 
 
