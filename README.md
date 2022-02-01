@@ -1,6 +1,6 @@
 # Web Crawler REST API
 
-This program is a web crawler to go up to provided depth and up ot maximum pages. Crawling service is exposed as REST endpoints. Web UI is available to complete web crawler request form, start web crawler and get statistics as file in CSV format.
+Web crawler program to fetch data on HTML pages up to provided depth and up ot maximum pages. Crawling service is exposed as REST endpoints. Web UI is available to complete web crawler request form, start web crawler and get statistics as file in CSV format.
 
 Once application is started web UI is available on: http://localhost:8080/main or http://localhost:8080/
 
