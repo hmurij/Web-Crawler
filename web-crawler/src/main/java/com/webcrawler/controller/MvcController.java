@@ -34,12 +34,28 @@ public class MvcController {
 
     private static Logger log = LoggerFactory.getLogger(RestController.class);
 
+    /**
+     * Handles initial GET request, adds empty crawl request object as attribute to model.
+     * @param model holder for model attributes.
+     * @return Thymeleaf template name
+     */
     @GetMapping("/main")
     public String mainPage(Model model) {
         model.addAttribute("crawlRequest", new CrawlRequest());
         return "main";
     }
 
+    /**
+     * Handles POST request to initiate web crawler service. Once web crawl request completed
+     * all statistics are collected from repository and total number of hits per each keyword
+     * added as attribute to model as map in keyword total hits pairs.
+     * @param crawlRequest object holding web crawler request parameters,
+     *                     such as: url, coma delimited keywords, depth and page limit.
+     *
+     * @param model holder for model attributes
+     * @return Thymeleaf template name
+     * @throws JsonProcessingException
+     */
     @PostMapping("/start")
     public String startCrawl(@ModelAttribute("crawlRequest") CrawlRequest crawlRequest, Model model) throws JsonProcessingException {
         log.info("Start crawl on url: {}", crawlRequest.toString());
@@ -74,6 +90,10 @@ public class MvcController {
         return "info";
     }
 
+    /**
+     * Handles GET request to get web crawl service report as file in CSV format.
+     * @return web crawl service report as file in CSV format.
+     */
     @GetMapping("/csvFile")
     public HttpEntity<byte[]> getCsvFile() {
 
@@ -94,6 +114,11 @@ public class MvcController {
         return new HttpEntity<byte[]>(response.getBody(), header);
     }
 
+    /**
+     * Handles GET request to get top 10 pages of web crawl service report as file in CSV format,
+     * sorted in descending order.
+     * @return web crawl service report of top 10 pages as file in CSV format.
+     */
     @GetMapping("/csvFileTop10")
     public HttpEntity<byte[]> getCsvFileTop10() {
 
